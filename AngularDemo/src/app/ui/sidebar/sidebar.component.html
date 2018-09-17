@@ -1,0 +1,180 @@
+<aside class="main-sidebar">
+  <section class="sidebar">
+    <div class="user-panel">
+      <div class="pull-left image">
+        <img src="./assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+      </div>
+      <div class="pull-left info">
+        <p>Admin</p>
+        <a href="#">
+          <i class="fa fa-circle text-success"></i> Online</a>
+      </div>
+    </div>
+    <ul class="sidebar-menu" data-widget="tree">
+      <li class="treeview" routerLinkActive="active">
+        <a [routerLink]="['/home/dashboard']">
+          <i class="fa fa-dashboard"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+      <li routerLinkActive="active">
+        <a [routerLink]="['/home/change-password']">
+          <i class="fa fa-key"></i>
+          <span>Change Password</span>
+        </a>
+      </li>
+      <li class="treeview menu-open" routerLinkActive="active">
+        <a href="javascript:void(0)">
+          <i class="fa fa-asterisk"></i>
+          <span>Master</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu" style="display:block;">
+          <li routerLinkActive="active">
+            <a [routerLink]="['/master/advertise']">
+              <i class="fa fa-bullhorn"></i>
+              <span>Advertise</span>
+            </a>
+          </li>
+          <li routerLinkActive="active">
+            <a [routerLink]="['/master/country']">
+              <i class="fa fa-globe"></i>
+              <span>Country</span>
+            </a>
+          </li>
+          <li routerLinkActive="active">
+            <a [routerLink]="['/master/currency']">
+              <i class="fa fa-dollar"></i>
+              <span>Currency</span>
+            </a>
+          </li>
+          <li routerLinkActive="active">
+            <a [routerLink]="['/master/pair']">
+              <i class="fa fa-venus-double"></i>
+              <span>Currency Pair</span>
+            </a>
+          </li>
+          <li routerLinkActive="active">
+            <a [routerLink]="['/master/news']">
+              <i class="fa fa-newspaper-o"></i>
+              <span>News</span>
+            </a>
+          </li>
+          <li routerLinkActive="active">
+            <a [routerLink]="['/master/setting']">
+              <i class="fa fa-cog"></i>
+              <span>Setting</span>
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/master/static-pages']" routerLinkActive="active">
+              <i class="fa fa-user-o"></i>Static Pages</a>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview" routerLinkActive="active">
+        <a href="javascript:void(0)">
+          <i class="fa fa-users"></i>
+          <span>Users</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a [routerLink]="['/user-detail/user']" routerLinkActive="active">
+              <i class="fa fa-user"></i>Active User</a>
+          </li>
+          <li>
+            <a [routerLink]="['/user-detail/block-user']" routerLinkActive="active">
+              <i class="fa fa-ban"></i>Deactive User</a>
+          </li>
+          <li>
+            <a [routerLink]="['/user-detail/pending-email-user']" routerLinkActive="active">
+              <i class="fa fa-user-o"></i>UnVerified User</a>
+          </li>
+          <li>
+            <a [routerLink]="['/user-detail/block-user-wallet']" routerLinkActive="active">
+              <i class="fa fa-google-wallet"></i>Block User Wallet</a>
+          </li>
+          <li routerLinkActive="active">
+            <a [routerLink]="['/user-detail/send-email']">
+              <i class="fa fa-envelope-o"></i>
+              <span>Send Email</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview" routerLinkActive="active">
+        <a href="javascript:void(0)">
+          <i class="fa fa-files-o"></i>
+          <span>Report</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li class="treeview" routerLinkActive="active">
+            <a [routerLink]="['/report/summary']">
+              <i class="fa fa-file-o"></i>
+              <span>Summary Detail</span>
+            </a>
+          </li>
+          <li>
+            <a [routerLink]="['/report/open-order']" routerLinkActive="active">
+              <i class="fa fa-file-o"></i>Open Order</a>
+          </li>
+          <li>
+            <a [routerLink]="['/report/wallet']" routerLinkActive="active">
+              <i class="fa fa-file-o"></i>User wallet</a>
+          </li>
+          <li>
+            <a [routerLink]="['/report/pending-wallet']" routerLinkActive="active">
+              <i class="fa fa-file-o"></i>Pending wallet</a>
+          </li>
+          <li>
+            <a [routerLink]="['/report/trade-history']" routerLinkActive="active">
+              <i class="fa fa-file-o"></i>Trade History </a>
+          </li>
+          <li>
+            <a [routerLink]="['/report/stop-limit']" routerLinkActive="active">
+              <i class="fa fa-file-o"></i>Stop-Limit Order </a>
+          </li>
+          <li>
+            <a [routerLink]="['/report/pending-withdraw']" routerLinkActive="active">
+              <i class="fa fa-file-o"></i>Pending Withdraw</a>
+          </li>
+          <li>
+            <a [routerLink]="['/report/confirm-withdraw']" routerLinkActive="active">
+              <i class="fa fa-file-o"></i>Confirm Withdraw</a>
+          </li>
+          <li>
+            <a [routerLink]="['/report/deposit']" routerLinkActive="active">
+              <i class="fa fa-file-o"></i>Deposit</a>
+          </li>
+        </ul>
+      </li>
+      <li class="treeview">
+        <a href="javascript:void(0)">
+          <i class="fa fa-hand-o-up"></i>
+          <span>Support</span>
+          <span class="pull-right-container">
+            <i class="fa fa-angle-left pull-right"></i>
+          </span>
+        </a>
+        <ul class="treeview-menu">
+          <li>
+            <a [routerLink]="['/support/user-support']">
+              <i class="fa fa-exclamation-circle"></i>User Support</a>
+          </li>
+          <li>
+            <a [routerLink]="['/support/admin-support']">
+              <i class="fa fa-check"></i>Admin Support</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</aside>
