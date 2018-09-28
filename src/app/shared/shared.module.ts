@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DateFormatPipe } from './pipe';
+import { NumberOnlyDirective } from './directive';
+import { Common } from './common';
+import { LaddaModule } from 'angular2-ladda';
+import { ToastrModule } from 'ngx-toastr';
 
-
-const pipe = [];
-const directive = [];
+const pipe = [DateFormatPipe];
+const directive = [NumberOnlyDirective];
 
 
 @NgModule({
@@ -12,7 +16,12 @@ const directive = [];
     // Angular
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+
+    // npm package
+    LaddaModule.forRoot({ style: 'zoom-in' }),
+    ToastrModule.forRoot({ positionClass: 'toaster-top-right' }),
+
   ],
   declarations: [...pipe, ...directive],
   exports: [
@@ -20,9 +29,13 @@ const directive = [];
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    
     ...pipe,
-    ...directive
-  ]
+    ...directive,
+
+    // npm package
+    LaddaModule,
+    ToastrModule
+  ],
+  providers: [Common]
 })
 export class SharedModule { }
