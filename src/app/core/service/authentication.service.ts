@@ -13,14 +13,12 @@ export class AuthenticationService {
   constructor(private http: HttpClient, public httpService: HttpService) { }
 
   Login(obj: Login) {
-    return this.http.post(`${environment}/token`,
-      `username=${obj.Username}&password=${obj.Password}`,
-      this.httpService.getHttpCommon());
+    return this.http.post(`${environment.apiUrl}login`, JSON.stringify(obj), this.httpService.getJsonHttpCommon());
   }
 
   CheckUserLoggedIn(): boolean {
     if (localStorage.getItem('currentUser')) {
-      const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+      // const currentUser = JSON.parse(localStorage.getItem('currentUser'));
       this.isLogin.emit(true);
       return true;
     }

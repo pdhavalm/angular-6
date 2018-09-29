@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     $('body').addClass('sidebar-mini');
     this.adminService.CheckUserLoggedIn();
     const currentUrl = this.url.path().substring(1);
-    const str = ['account', 'account/login'];
+    const str = ['account', '/login'];
     if ((currentUrl === '' && this.isLogin) || (this.isLogin && str.includes(currentUrl))) {
       this.router.navigate(['/home/dashboard']);
     }
@@ -35,6 +35,6 @@ export class AppComponent implements OnInit {
 
   Logout() {
     this.adminService.Logout();
-    this.router.navigate(['/account/login']);
+    this.router.navigate(['/login']);
   }
 }

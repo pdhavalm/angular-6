@@ -10,7 +10,9 @@ const routes = [{ path: 'login', component: LoginComponent }];
 
 @NgModule({
   imports: [
-    SharedModule, CommonModule, RouterModule.forChild(routes)
+    SharedModule,
+    CommonModule,
+    RouterModule.forChild(routes)
   ],
   exports: [SidebarComponent],
   declarations: [SidebarComponent, LoginComponent, LoginComponent]

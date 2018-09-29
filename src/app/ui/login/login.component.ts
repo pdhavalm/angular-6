@@ -39,8 +39,8 @@ export class LoginComponent implements OnInit {
     this.isLoginSubmitted = true;
     if (isValid) {
       this.adminService.Login(obj).subscribe((data: any) => {
-        if (data.Status === 'success') {
-          localStorage.setItem('currentUser', JSON.stringify(data));
+        if (data.token !== '') {
+          localStorage.setItem('currentUser', JSON.stringify(data.token));
           this.adminService.CheckUserLoggedIn();
           console.log('/home/dashboard');
           window.location.href = '/home/dashboard';
